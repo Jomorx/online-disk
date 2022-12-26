@@ -1,3 +1,3 @@
-const { NEXT_PUBLIC_BASE_URL } = process.env;
-export const baseURL = NEXT_PUBLIC_BASE_URL!;
-export const timeout = 3000;
+const baseURL = process.env.NEXT_PUBLIC_BASE_URL;
+const timeout = 3000;
+export { baseURL, timeout };

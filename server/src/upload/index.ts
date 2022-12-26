@@ -12,7 +12,7 @@ const config = {
 const multiparty_upload = (req, auto) => {
   typeof auto !== "boolean" ? (auto = false) : null;
 
-  //   if (auto) config.uploadDir = uploadDir;
+    // if (auto) config.uploadDir = uploadDir;
   return new Promise<{ files: { file: File }; fields: { fileName: string[] } }>(
     async (resolve, reject) => {
       new multiparty.Form(config).parse(req, (err, fields, files) => {
@@ -20,9 +20,6 @@ const multiparty_upload = (req, auto) => {
           reject(err);
           return;
         }
-        console.log(fields);
-        console.log(files);
-
         resolve({
           fields,
           files,
@@ -37,6 +34,8 @@ router.post("/upload_single", async (req, res) => {
   try {
     let { files } = await multiparty_upload(req, true);
     let file = (files.file && files.file[0]) || {};
+    console.log(file.fileName);
+    
     res.send({
       code: 0,
       codeText: "upload success",

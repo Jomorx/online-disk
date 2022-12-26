@@ -1,7 +1,6 @@
-import axios from "axios";
-import { ChangeEvent, useRef, useState } from "react";
+import { ChangeEvent } from "react";
 import MoHeader from "../layouts/MoHeader";
-import { request } from "../server";
+import request from "../server";
 
 export default function Home() {
   const handleFileUpload = (e: ChangeEvent<HTMLInputElement>) => {
@@ -10,20 +9,12 @@ export default function Home() {
     const formData = new FormData();
     formData.append("file", file);
     formData.append("fileName", name);
-    request.post("/upload/upload_single", {
-      body: formData,
-    });
+    request.post("/upload/upload_single", formData);
   };
   return (
     <>
-      <MoHeader></MoHeader>
+      <MoHeader />
       <input type="file" onChange={handleFileUpload} />
-      <button onClick={e=>{
-        axios.get("").then(()=>{
-          
-        })
-      }}></button>
     </>
   );
 }
-
