@@ -1,12 +1,16 @@
 import axios from "axios";
 import nProgress from "nprogress";
 import { baseURL, timeout } from "./config";
+
 const request = axios.create({
-  baseURL: baseURL,
+  baseURL,
   timeout,
 });
 request.interceptors.request.use(config => {
-  config.headers!["Content-Type"] = "multipart/form-data";
+  config.headers = {
+    ...config.headers,
+    "Content-Type": "multipart/form-data",
+  };
   nProgress.start();
   return config;
 });

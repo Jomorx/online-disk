@@ -4,6 +4,7 @@ const index = () => {
   return (
     <>
       <span>Header</span>
+      <span>Header</span>
     </>
   );
 };

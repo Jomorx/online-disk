@@ -69,5 +69,12 @@ module.exports = {
     ],
     "no-nested-ternary": "off",
     "import/prefer-default-export": "off",
+    "no-param-reassign": [
+      2,
+      {
+        props: true,
+        ignorePropertyModificationsFor: ["config"],
+      },
+    ],
   },
 };
