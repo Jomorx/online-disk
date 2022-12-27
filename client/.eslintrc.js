@@ -76,5 +76,9 @@ module.exports = {
         ignorePropertyModificationsFor: ["config"],
       },
     ],
+    "react/function-component-definition": [
+      2,
+      { namedComponents: ["arrow-function", "function-declaration"] },
+    ],
   },
 };

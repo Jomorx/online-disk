@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "commit": "git-cz",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "next":"cd ./client && pnpm run dev",
+    "server": "cd ./server && npm run dev"
   },
   "keywords": [],
   "author": "",
