@@ -6,7 +6,7 @@
   "scripts": {
     "commit": "git-cz",
     "prepare": "husky install",
-    "next":"cd ./client && pnpm run dev",
+    "next": "cd ./client && pnpm run dev",
     "server": "cd ./server && npm run dev"
   },
   "keywords": [],

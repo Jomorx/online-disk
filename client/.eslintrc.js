@@ -1,3 +1,5 @@
+const path = require("path");
+
 module.exports = {
   root: true,
   parserOptions: {
@@ -19,8 +21,16 @@ module.exports = {
       version: "detect",
     },
     "import/resolver": {
-      node: {
-        extensions: [".ts", ".tsx"],
+      // node: {
+      //   extensions: [".ts", ".tsx"],
+      // },
+      // alias: {
+      //   map: [["@/*", path.resolve(__dirname, "./*")]],
+      //   extension: [".ts", ".tsx", ".scss", "*"],
+      // },
+      typescript: {
+        project: path.join(__dirname, "./tsconfig.json"), // 插件读取tsconfig配置的路径
+        alwaysTryTypes: true, // always try to resolve types under
       },
     },
   },
@@ -42,6 +52,7 @@ module.exports = {
     "@typescript-eslint/no-unused-vars": "error",
     "@typescript-eslint/no-explicit-any": "error",
     "react/react-in-jsx-scope": "off",
+    "@typescript-eslint/no-var-requires": "off",
     "react/jsx-filename-extension": [
       1,
       {

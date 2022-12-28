@@ -1,7 +1,6 @@
 import { ChangeEvent } from "react";
-import MoHeader from "../layouts/MoHeader";
+import { TextField } from "@mui/material";
 import request from "../server";
-import style from "../styles/Home.module.scss";
 
 export default function Home() {
   const handleFileUpload = (e: ChangeEvent<HTMLInputElement>) => {
@@ -14,9 +13,8 @@ export default function Home() {
   };
   return (
     <>
-      <MoHeader />
       <input type="file" onChange={handleFileUpload} />
-      <span className={style.title}>title</span>
+      <TextField id="outlined-basic" label="Outlined" variant="outlined" />
     </>
   );
 }
