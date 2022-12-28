@@ -1,0 +1,17 @@
+.App{
+  --prBgColor:#fff;
+  --seBgColor:rgb(245,245,245);
+  --prTextColor:rgba(0, 0, 0, 0.87);
+  --tsTime:0.3s;
+  transition: all 0.3s linear;
+}
+.App.dark{
+  --prBgColor:#121212;
+  --seBgColor:#141414;
+  --prTextColor:#fff;
+
+}
+.App{
+  background-color: var(--prBgColor);
+  color: var(--prTextColor);
+}
