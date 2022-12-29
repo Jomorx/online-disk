@@ -1,5 +1,12 @@
+import { NavMenu } from "@/components/NavMenu";
+
 const MoAside = () => {
-  return <h1>Aside</h1>;
+  return (
+    <>
+      <NavMenu />
+      <footer>123</footer>
+    </>
+  );
 };
 
 export default MoAside;

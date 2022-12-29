@@ -12,12 +12,8 @@ const MoLayout: React.FC<{ children: ReactNode }> = ({ children }) => {
       </aside>
       <main className={styles.main}>
         <header className={styles.header}>
-          <MoHeader />
-          <button type="button" onClick={() => setDarkTheme(!darkTheme)}>
-            darkTheme
-          </button>
+          <MoHeader darkTheme={darkTheme} setDarkTheme={setDarkTheme} />
         </header>
-
         {children}
       </main>
     </div>

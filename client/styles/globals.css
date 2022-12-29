@@ -7,11 +7,14 @@
 }
 .App.dark{
   --prBgColor:#121212;
-  --seBgColor:#141414;
+  --seBgColor:#242424;
   --prTextColor:#fff;
 
 }
 .App{
   background-color: var(--prBgColor);
   color: var(--prTextColor);
+}
+li{
+  list-style: none;
 }
