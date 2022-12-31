@@ -1,6 +1,13 @@
-.header-container{
+.header-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 90px;
+  height: 40px;
+  padding: 0 40px;
 }
+.icon-enter-active {
+  transform: rotate(360deg);
+  transition: all 0.3s linear;
+}
+
+

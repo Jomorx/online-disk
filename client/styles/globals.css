@@ -1,8 +1,12 @@
+@import "@/assets/css/init.css";
 .App{
   --prBgColor:#fff;
   --seBgColor:rgb(245,245,245);
   --prTextColor:rgba(0, 0, 0, 0.87);
   --tsTime:0.3s;
+  --menuHoverColor:#ececee;
+  --menuActiveColor:#e3e3e5;
+
   transition: all 0.3s linear;
 }
 .App.dark{
@@ -15,6 +19,4 @@
   background-color: var(--prBgColor);
   color: var(--prTextColor);
 }
-li{
-  list-style: none;
-}
+

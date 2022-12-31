@@ -4,7 +4,7 @@ const MoAside = () => {
   return (
     <>
       <NavMenu />
-      <footer>123</footer>
+      <footer>footer</footer>
     </>
   );
 };
