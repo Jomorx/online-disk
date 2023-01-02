@@ -2,14 +2,15 @@ import classNames from "classnames";
 import { useRouter } from "next/router";
 import Image from "next/image";
 import React from "react";
-import DescriptionRoundedIcon from "@mui/icons-material/DescriptionRounded";
 import cow from "@/assets/image/cow.webp";
 import { menuItems } from "../config/menuConfig";
 import styles from "./NavMenu.module.scss";
+import useMatchMenu from "../hooks/useMatchMenu";
 
 const NavMenu = () => {
   const router = useRouter();
   const { pathname } = router;
+  useMatchMenu(pathname);
   return (
     <>
       {/* 网站名称以及icon */}
@@ -36,10 +37,7 @@ const NavMenu = () => {
             }}
             key={item.path}
           >
-            <DescriptionRoundedIcon
-              color="action"
-              style={{ marginRight: "16px" }}
-            />
+            {item.icon}
             {item.name}
           </li>
         ))}

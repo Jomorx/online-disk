@@ -1,11 +1,12 @@
-import Router from "next/router";
+import { useRouter } from "next/router";
 import React, { useEffect } from "react";
 
 const NotFound = () => {
+  const router = useRouter();
   useEffect(() => {
-    Router.push("/drive");
+    router.push("/drive");
   }, []);
-  return <div>NotFound</div>;
+  return <h1>404</h1>;
 };
 
 export default NotFound;

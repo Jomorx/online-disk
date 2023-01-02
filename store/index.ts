@@ -1,9 +1,11 @@
 import { configureStore } from "@reduxjs/toolkit";
 import countStore from "./countStore/countStore";
+import headerStore from "./headerStore/headerStore";
 
 export const store = configureStore({
   reducer: {
     countStore,
+    headerStore,
   },
 });
 
