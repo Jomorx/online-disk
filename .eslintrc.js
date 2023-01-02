@@ -87,7 +87,7 @@ module.exports = {
       2,
       {
         props: true,
-        ignorePropertyModificationsFor: ["config"],
+        ignorePropertyModificationsFor: ["config", "state"],
       },
     ],
     "react/function-component-definition": [

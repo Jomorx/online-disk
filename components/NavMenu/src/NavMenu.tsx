@@ -12,6 +12,7 @@ const NavMenu = () => {
   const { pathname } = router;
   return (
     <>
+      {/* 网站名称以及icon */}
       <div className={styles.titleContainer}>
         <Image
           src={cow}
