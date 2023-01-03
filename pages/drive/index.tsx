@@ -1,6 +1,5 @@
 import request from "@/server";
 import React, { ChangeEvent } from "react";
-import { TextField } from "@mui/material";
 import { useAppDispatch, useAppSelector } from "@/hooks/useStore";
 import { incrementByAmount } from "@/store/countStore/countStore";
 
@@ -18,7 +17,6 @@ const Drive = () => {
   return (
     <>
       <input type="file" onChange={handleFileUpload} />
-      <TextField id="outlined-basic" label="Outlined" variant="outlined" />
       <h1>{value}</h1>
       <button
         type="button"

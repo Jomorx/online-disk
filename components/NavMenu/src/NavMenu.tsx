@@ -2,7 +2,7 @@ import classNames from "classnames";
 import { useRouter } from "next/router";
 import Image from "next/image";
 import React from "react";
-import cow from "@/assets/image/cow.webp";
+import cow from "@/assets/image/icon/cow.webp";
 import { menuItems } from "../config/menuConfig";
 import styles from "./NavMenu.module.scss";
 import useMatchMenu from "../hooks/useMatchMenu";
