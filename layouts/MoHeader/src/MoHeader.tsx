@@ -1,7 +1,7 @@
 import React from "react";
 import LightModeIcon from "@mui/icons-material/LightMode";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
-import UploadIcon from '@mui/icons-material/Upload';
+import UploadIcon from "@mui/icons-material/Upload";
 import { CSSTransition, SwitchTransition } from "react-transition-group";
 import { MoTooltipWrapper } from "@/components/MoTooltipWrapper";
 import { useAppSelector } from "@/hooks/useStore";
