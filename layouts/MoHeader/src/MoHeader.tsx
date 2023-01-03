@@ -1,7 +1,9 @@
 import React from "react";
 import LightModeIcon from "@mui/icons-material/LightMode";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
+import UploadIcon from '@mui/icons-material/Upload';
 import { CSSTransition, SwitchTransition } from "react-transition-group";
+import { MoTooltipWrapper } from "@/components/MoTooltipWrapper";
 import { useAppSelector } from "@/hooks/useStore";
 import SearchIcon from "@mui/icons-material/Search";
 import styles from "./MoHeader.module.scss";
@@ -19,7 +21,12 @@ const MoHeader: React.FC<{
       </div>
       {/* header左边容器 */}
       <div style={{ display: "flex", alignItems: "center" }}>
-        <SearchIcon />
+        <MoTooltipWrapper title="search">
+          <SearchIcon />
+        </MoTooltipWrapper>
+        <MoTooltipWrapper title="upload">
+          <UploadIcon />
+        </MoTooltipWrapper>
         <div
           className={styles["switch-mode"]}
           onClick={() => setDarkTheme(prev => !prev)}
@@ -33,7 +40,9 @@ const MoHeader: React.FC<{
               }}
               timeout={300}
             >
-              {darkTheme ? <DarkModeIcon /> : <LightModeIcon />}
+              <MoTooltipWrapper title={darkTheme ? "lightMode" : "darkMode"}>
+                {darkTheme ? <DarkModeIcon /> : <LightModeIcon />}
+              </MoTooltipWrapper>
             </CSSTransition>
           </SwitchTransition>
         </div>
