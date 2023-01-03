@@ -12,11 +12,12 @@ const MoHeader: React.FC<{
   const { title } = useAppSelector(state => state.headerStore);
   return (
     <div className={styles["header-container"]}>
-      <span>{title}</span>
+      <h3>{title}</h3>
       <div
         style={{ marginRight: "20px" }}
         onClick={() => setDarkTheme(prev => !prev)}
       >
+        {/* 夜间模式按钮 */}
         <SwitchTransition mode="out-in">
           <CSSTransition
             key={darkTheme ? "on" : "off"}
