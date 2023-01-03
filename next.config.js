@@ -13,7 +13,6 @@ const nextConfig = {
     };
     return config;
   },
-  distDir: "dist",
   async redirects() {
     return [
       {
